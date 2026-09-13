@@ -28,6 +28,7 @@
         fi
         source src/.venv/bin/activate
         pip install -r src/requirements.txt
+        pre-commit install
       '';
     };
   };
