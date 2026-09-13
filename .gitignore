@@ -1,2 +1,7 @@
 # Cache de nix-direnv
 .direnv
+
+# Arquivos LaTeX temporários
+trabalho.*
+_minted
+!trabalho.tex

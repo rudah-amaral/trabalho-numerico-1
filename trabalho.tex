@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+% \usepackage[backend = biber, defernumbers=true]{biblatex}
+\usepackage[numbers]{natbib}
+\usepackage{amsmath, amsfonts, amssymb, mathptmx}
+\usepackage{hyperref}
+\usepackage{icomma}
+\usepackage{indentfirst}
+\usepackage{pgf}
+\usepackage{rotating, makecell}
+\usepackage{tabularray}
+\usepackage[nottoc]{tocbibind}
+\usepackage{tcolorbox}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{csquotes}
+\usepackage{lmodern}
+\usepackage{siunitx}
+\usepackage[a4paper, left = 2cm, right = 2cm]{geometry}
+\usepackage{float}
+\usepackage{graphicx}
+
+\bibliographystyle{unsrtnat}
+
+\UseTblrLibrary{siunitx}
+
+% minted needs -shell-escape when compiling with pdflatex
+\tcbuselibrary{listings}
+\tcbuselibrary{breakable}
+
+% \addbibresource{meu.bib}
+
+\title{
+    Universidade do Rio de Janeiro\\
+    Bacharelado em Engenharia de Computação\\
+    Cálculo Númerico\\
+    Trabalho Tal
+}
+\author{
+    Rudah Coutinho Amaral - 202510069611\\
+    Samuel de Freitas Pinagé - 202510334111
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Resumo}
+
+Resumo tal com citação tal \cite{gomesruggiero1997}.
+
+\clearpage
+\tableofcontents
+
+\clearpage
+\section{Introdução}
+
+Lorem Ipsum Dolore.
+
+\clearpage
+\section{Conclusões}
+
+Conclusão.
+
+\clearpage
+% \printbibliography
+\bibliography{meu}
+
+\end{document}
