@@ -4,6 +4,19 @@ O 1º trabalho da disciplina de cálculo numérico tem como objetivo utilizar de
 dois métodos numéricos (o Método de Newton-Raphson e o Método da Bisseção) para
 encontrar raízes reais de funções de maneira programática.
 
+## Estrutura do projeto
+ 
+```
+trabalho-numerico-1/
+├── app.py                 # ponto de entrada (interface de linha de comando)
+└── modules/
+    ├── expressoes.py          # interpreta a expressão digitada e calcula a derivada (sympy)
+    ├── EncontrarRaizes.py     # utilizado para encontrar os intervalos que possuem raiz
+    ├── bissecao.py            # método da bisseção
+    └── newton_raphson.py      # método de Newton-Raphson
+    
+```
+
 ## Instalação de dependências
 
 Tanto contribuidores como o usuário final devem se assegurar que as dependências
@@ -20,7 +33,7 @@ necessários junto com suas bibliotecas.
 > projeto ao entrar no diretório raiz.
 
 - Instalação imperativa: Garanta que seu ambiente contenha:
-    - Uma instalação de Python 3.12.12, junto com as bibliotecas presentes no
+    - Uma instalação de Python 3.13.15, junto com as bibliotecas presentes no
     arquivo [src/requirements.txt](requirements.txt) para execução dos scripts
     python.
     - Uma instalação LaTeX com todos os pacotes descritos no preâmbulo de
