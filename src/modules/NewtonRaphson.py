@@ -23,7 +23,7 @@ def newton(funcao, dfuncao, a, b):
 
         iteracoes += 1
 
-    return tentativa
+    return tentativa, iteracoes
         
 
     

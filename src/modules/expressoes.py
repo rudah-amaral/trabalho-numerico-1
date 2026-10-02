@@ -9,7 +9,7 @@ CONTEXTO_MATEMATICO = {
     # hiperbolicas
     "sinh": math.sinh, "cosh": math.cosh, "tanh": math.tanh,
     # logaritmos e exponenciais
-    "log": math.log, "log10": math.log10, "log2": math.log2, "exp": math.exp,
+    "log": math.log, "ln": math.log, "log10": math.log10, "log2": math.log2, "exp": math.exp,
     # raizes e potencias
     "sqrt": math.sqrt, "pow": math.pow,
     # constantes

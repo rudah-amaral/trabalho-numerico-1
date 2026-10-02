@@ -6,8 +6,9 @@ def encontrar_intervalo(funcao, a, b, passo):
     subintervalos = []
     x0 = a
 
-    while x0 < b:
-        x1 = min(x0 + passo, b)
+    while x0 < b + passo:
+        x1 = min(x0 + passo, b + passo)
+
 
         try:
             f0 = funcao(x0)
@@ -19,11 +20,13 @@ def encontrar_intervalo(funcao, a, b, passo):
             continue
 
         if f0 == 0:
-            raizes.append(x0)
+            raizes.append(x0, 0)
         elif f0 * f1 < 0:
             subintervalos.append((x0, x1))
 
         x0 = x1
+        
+       
 
     return subintervalos, raizes
 

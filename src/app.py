@@ -10,6 +10,7 @@ def main ():
     passo_texto = input("Digite o passo do intervalo que voce analisar: ")
     metodo = input("Digite o método que você deseja trabalhar (Bisseção ou Newton-Raphson): ")
 
+
     try:
         a = traduzir_numero(a_texto, "a")
         b = traduzir_numero(b_texto, "b")
@@ -29,8 +30,8 @@ def main ():
 
     if raizes:
         print(f"Raizes encontradas no intervalo {a_texto} e {b_texto}")
-        for i in sorted(raizes):
-            print(f"{i:.6f}")
+        for raiz, iteracoes in sorted(raizes):
+            print(f"Raiz: {raiz:.6f}, iteracoes: {iteracoes}")
     else:
         print(f"Nenhuma raiz encontrada no intervalo {a_texto} e {b_texto}")
 
