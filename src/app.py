@@ -2,6 +2,7 @@ from modules.expressoes import criar_funcao, criar_derivada, traduzir_numero, Ex
 from modules.bissecao import bissecao
 from modules.NewtonRaphson import newton
 from modules.EncontrarRaizes import buscar_raizes
+from modules.PlotarGrafico import plotar_grafico
 
 def main ():
     expressao_texto = input("Digite sua f(x): ")
@@ -32,6 +33,7 @@ def main ():
         print(f"Raizes encontradas no intervalo {a_texto} e {b_texto}")
         for raiz, iteracoes in sorted(raizes):
             print(f"Raiz: {raiz:.6f}, iteracoes: {iteracoes}")
+        plotar_grafico(expressao, a, b, raizes)
     else:
         print(f"Nenhuma raiz encontrada no intervalo {a_texto} e {b_texto}")
 
