@@ -2,14 +2,13 @@ from modules.expressoes import criar_funcao, criar_derivada, traduzir_numero, Ex
 from modules.bissecao import bissecao
 from modules.NewtonRaphson import newton
 from modules.EncontrarRaizes import buscar_raizes
-from modules.PlotarGrafico import plotar_grafico
 
 def main ():
     expressao_texto = input("Digite sua f(x): ")
     a_texto = input("Digite o menor valor do intervalo que voce analisar a convergencia: ")
     b_texto = input("Digite o maior valor do intervalo que voce analisar a convergencia: ")
     passo_texto = input("Digite o passo do intervalo que voce analisar: ")
-    metodo = input("Digite o método que você deseja trabalhar (Bisseção ou Newton-Raphson): ")
+    metodo = input("Digite 1 para Bisseção, 2 para Newton-Raphson: ")
 
 
     try:
@@ -18,7 +17,7 @@ def main ():
         passo = traduzir_numero(passo_texto, "passo")
         expressao = criar_funcao(expressao_texto)
 
-        if metodo == "bissecao":
+        if metodo == "1":
             resolver = lambda x0, x1: bissecao(expressao, x0, x1)
         else:
             dfuncao = criar_derivada(expressao_texto)
@@ -33,9 +32,12 @@ def main ():
         print(f"Raizes encontradas no intervalo {a_texto} e {b_texto}")
         for raiz, iteracoes in sorted(raizes):
             print(f"Raiz: {raiz:.6f}, iteracoes: {iteracoes}")
-        plotar_grafico(expressao, a, b, raizes)
     else:
         print(f"Nenhuma raiz encontrada no intervalo {a_texto} e {b_texto}")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()   # o que você já executa hoje
+    except Exception as e:
+        print(f"\nErro: {e}")
+    input("\nPressione Enter para sair...")

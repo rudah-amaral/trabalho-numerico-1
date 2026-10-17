@@ -5,7 +5,7 @@ def bissecao(funcao, a, b, tolerancia = 1e-6, max_iteracoes = 100):
         c = (a+b)/2.0 
         
         if funcao(c) == 0:
-            return c
+            return c, iteracoes
         elif funcao(a) * funcao(c) < 0: 
             b = c
         else:
